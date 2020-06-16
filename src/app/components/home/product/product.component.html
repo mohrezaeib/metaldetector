@@ -1,0 +1,26 @@
+<div class="container">
+
+<button (click)="getProduct()" type="button" class="btn" > get </button>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <div [(ngModel)]="result.length">
+loading
+  </div>
+<div     >
+
+
+  <ul *ngFor="let element of result">
+   <li [innerHTML]="element.province.name" ]>
+
+
+   </li>
+
+  </ul>
+
+
+  </div>
+</div>
+

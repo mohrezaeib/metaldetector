@@ -1,0 +1,8 @@
+<form class="container ">
+    <div class=" row">
+        <span class=""></span>
+        <input #searchInput class="" (keyup)="onKeyup(searchInput.value)" (keyup.enter)="searchProduct()">
+    </div>
+    <button type="button" (click)="searchProduct()"  class="">search</button>
+    dynamic search view {{this.value}}
+</form>
