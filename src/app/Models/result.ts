@@ -1,22 +1,22 @@
 export class Result{
-     object : [
+     object :
       {
-         cities : [
+         cities :
           {
              city : {
                id :  number ;
                name :  string;
             } ;
              userCount :  number;
-          }
-        ] ;
+          }[]
+         ;
          province : {
            id :  number ;
            name :  string;
         } ;
          userCount :  number;
-      }
-    ] ;
+      }[]
+     ;
      status : true ;
      message :  string;
   }

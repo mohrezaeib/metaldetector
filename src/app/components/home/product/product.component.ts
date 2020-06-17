@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataServiceService } from 'src/app/services/data-service.service';
 import { Provinces ,Province} from 'src/app/Models/Provinces';
+import { Result} from 'src/app/Models/result';
+
 
 @Component({
   selector: 'app-product',
@@ -8,8 +10,8 @@ import { Provinces ,Province} from 'src/app/Models/Provinces';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  result:Province[]=[];
-name:string;
+  result:Province[];
+  name:string;
 
   completed:boolean=false;
   constructor(private productService:DataServiceService) {
@@ -22,24 +24,21 @@ name:string;
   }
     getProduct() {
 
-    this.productService.getProduct().subscribe({
-      next: function(value){
+    this.productService.getProduct().subscribe(
+       (value:Result)=>{
         if(value.status){
-          this.result= value.object;
+         this.result= value.object;
           console.log(this.result);
           //console.log(this.result[5].province.name);
         }
-
-      },
-      complete :function () {
-        console.log("completed")
-        this.completed= true;
-
-
-
-
       }
-    });
+
+
+
+
+
+
+    );
   }
 
 }

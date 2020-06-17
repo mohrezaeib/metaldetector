@@ -1,37 +1,36 @@
 export class Provinces {
-    object: [
+    object:
       {
-        cities: [
+        cities:
           {
             city: {
-              id: 0,
+              id: number,
               name: string;
             };
             userCount: number;
-          }
-        ];
+          }[];
         province: {
-          id: 0;
+          id: number;
           name: string;
         };
         userCount: number;
-      }
-    ];
+      }[]
+    ;
     status: boolean;
     message: string;
   }
   export class Province{
-    cities: [
+    cities:
       {
         city: {
-          id: 0,
+          id: number,
           name: string;
         };
         userCount: number;
-      }
-    ];
+      }[];
+
     province: {
-      id: 0;
+      id: number;
       name: string;
     };
     userCount: number;
