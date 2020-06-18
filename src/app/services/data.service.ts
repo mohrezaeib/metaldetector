@@ -5,7 +5,7 @@ import {Result} from "../Models/result";
 @Injectable({
   providedIn: 'root'
 })
-export class DataServiceService {
+export class DataService {
    private url:string ='http://amlakapi.nicode.org/City/GetProviences';
 
   constructor(  private http: HttpClient) { }

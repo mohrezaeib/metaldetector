@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataServiceService } from 'src/app/services/data-service.service';
+import { DataService } from 'src/app/services/data.service';
 import { Provinces ,Province} from 'src/app/Models/Provinces';
 import { Result} from 'src/app/Models/result';
 
@@ -14,7 +14,7 @@ export class ProductComponent implements OnInit {
   name:string;
 
   completed:boolean=false;
-  constructor(private productService:DataServiceService) {
+  constructor(private productService:DataService) {
 
   }
 

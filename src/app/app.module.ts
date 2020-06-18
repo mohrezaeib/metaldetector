@@ -10,6 +10,8 @@ import { SearchFormComponent } from './components/home/search-form/search-form.c
 import { ProductComponent } from './components/home/product/product.component';
 import { HomeComponent } from './components/home/home/home.component';
 import {FormsModule} from "@angular/forms";
+import { ServerComponent } from './server/server.component';
+import {DataService} from "./services/data.service";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import {FormsModule} from "@angular/forms";
     FooterComponent,
     SearchFormComponent,
     ProductComponent,
-    HomeComponent
+    HomeComponent,
+    ServerComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import {FormsModule} from "@angular/forms";
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
